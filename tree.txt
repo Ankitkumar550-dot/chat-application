@@ -1,0 +1,74 @@
+├── .gitignore
+├── 3W Chat.apk
+├── client
+│   ├── .env
+│   ├── .gitignore
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── public
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo1921.png
+│   │   ├── logo512.png
+│   │   ├── logo5121.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   └── src
+│       ├── api
+│       │   ├── auth.js
+│       │   ├── http.js
+│       │   ├── messages.js
+│       │   └── rooms.js
+│       ├── App.jsx
+│       ├── components
+│       │   ├── ChatRoom
+│       │   │   ├── ChatRoom.jsx
+│       │   │   ├── MessageInput.jsx
+│       │   │   ├── MessageList.jsx
+│       │   │   ├── OnlineUsersList.jsx
+│       │   │   └── TypingIndicator.jsx
+│       │   ├── CreateRoomButton.jsx
+│       │   ├── Navbar.jsx
+│       │   ├── PrivateRoute.jsx
+│       │   └── RoomsSidebar.jsx
+│       ├── context
+│       │   ├── AuthContext.jsx
+│       │   └── SocketContext.jsx
+│       ├── hooks
+│       │   └── useAuth.js
+│       ├── index.js
+│       ├── pages
+│       │   ├── Chat.jsx
+│       │   ├── Home.jsx
+│       │   ├── Login.jsx
+│       │   └── Register.jsx
+│       ├── styles.css
+│       └── utils
+├── Documentation.pdf
+├── img
+│   └── a.txt
+├── README.md
+├── server
+│   ├── .env
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── src
+│   │   ├── index.js
+│   │   ├── middleware
+│   │   │   └── auth.js
+│   │   ├── models
+│   │   │   ├── Message.model.js
+│   │   │   ├── Room.model.js
+│   │   │   └── User.model.js
+│   │   ├── public
+│   │   ├── routes
+│   │   │   ├── auth.route.js
+│   │   │   ├── messages.route.js
+│   │   │   └── rooms.route.js
+│   │   ├── socket.js
+│   │   └── utils
+│   │       └── users.js
+│   └── test-socket.js
+├── tree.js
+└── tree.txt
