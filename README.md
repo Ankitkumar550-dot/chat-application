@@ -2,12 +2,7 @@
 
 <div align="center">
 
-![Chat Application](https://img.shields.io/badge/Chat-Real%20Time-blue?style=for-the-badge&logo=socket.io)
-![React](https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Socket.io](https://img.shields.io/badge/Socket.io-Real%20Time-010101?style=for-the-badge&logo=socket.io&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+
 
 **A full-stack real-time chat application built with modern web technologies**
 
@@ -730,5 +725,6 @@ Special thanks to the amazing open-source community and these fantastic tools:
 
 
 
-#   c h a t - a p p l i c a t i o n  
+#   c h a t - a p p l i c a t i o n 
+ 
  
