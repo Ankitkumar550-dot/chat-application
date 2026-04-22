@@ -28,16 +28,19 @@ const MONGO_URI =
 const REDIS_URL =
   process.env.REDIS_URL;
 
-console.log("🔗 Using Redis URL:", REDIS_URL);
-const redis = new Redis(REDIS_URL, {
-  retryStrategy(times) {
-    console.error(`Redis retry attempt #${times}`);
-    return Math.min(times * 50, 2000);
-  },
-});
+console.log("🔗 Using Redis URL:", REDIS_URL || "None (Using local storage)");
+let redis;
+if (REDIS_URL) {
+  redis = new Redis(REDIS_URL, {
+    retryStrategy(times) {
+      console.error(`Redis retry attempt #${times}`);
+      return Math.min(times * 50, 2000);
+    },
+  });
 
-redis.on("connect", () => console.log("✅ Redis connected"));
-redis.on("error", (err) => console.error("❌ Redis error:", err));
+  redis.on("connect", () => console.log("✅ Redis connected"));
+  redis.on("error", (err) => console.error("❌ Redis error:", err));
+}
 
 const app = express();
 app.use(express.json());

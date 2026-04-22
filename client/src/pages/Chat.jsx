@@ -10,55 +10,40 @@ import {
   List,
   ListItem,
   ListItemText,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  TextField,
   Badge,
   Divider,
   useMediaQuery,
   Drawer,
   IconButton,
   Avatar,
-  Chip,
   Paper,
   LinearProgress,
   Fade,
   Slide,
   Zoom,
-  useTheme,
   alpha,
 } from "@mui/material";
 import {
   Menu as MenuIcon,
   Chat as ChatIcon,
   People as PeopleIcon,
-  Add as AddIcon,
   Casino as CasinoIcon,
   Room as RoomIcon,
-  Message as MessageIcon,
-  Star as StarIcon,
-  Notifications as NotificationsIcon,
-  Online as OnlineIcon,
-  Circle as CircleIcon,
 } from "@mui/icons-material";
 import { useLocation } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import RoomsSidebar from "../components/RoomsSidebar";
 import ChatRoom from "../components/ChatRoom/ChatRoom";
-import { useSocket } from "../context/SocketContext";
 import CreateRoomDialog from "../components/CreateRoomButton";
 import http from "../api/http"; 
 
 const Chat = () => {
-  const theme = useTheme();
   const location = useLocation();
   const username =
     location.state?.username || localStorage.getItem("username") || "Guest";
 
   const [room, setRoom] = useState(null);
-  const [onlineUsers, setOnlineUsers] = useState([]);
+  const [onlineUsers] = useState([]);
   const [recentRooms, setRecentRooms] = useState([]);
   const [activeRooms, setActiveRooms] = useState({});
   const [unread, setUnread] = useState({});
@@ -66,9 +51,7 @@ const Chat = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const isMobile = useMediaQuery("(max-width:768px)");
-  const socket = useSocket();
 
-  const USERS_KEY = "chat_online_users";
   const ROOMS_KEY = "chat_rooms";
   const MESSAGES_KEY = "chat_messages";
 

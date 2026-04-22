@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef, useState } from "react";
 import MessageInput from "./MessageInput";
 import TypingIndicator from "./TypingIndicator";
 import { SocketContext } from "../../context/SocketContext";
-import { useNavigate } from "react-router-dom"; // if React Router
 import {
   Box,
   Typography,
@@ -27,8 +26,6 @@ export default function ChatRoom({ me, room,onBack }) {
   const [online, setOnline] = useState([]);
   const [typingUsers, setTypingUsers] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(!isMobile);
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (!socket) return;
