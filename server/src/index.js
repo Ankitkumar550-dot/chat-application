@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 // ✅ Allow multiple origins (local + deployed frontend)
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://real-time-chat-system-lyart.vercel.app",
+  process.env.CLIENT_URL || "https://real-time-chat-system-lyart.vercel.app",
 ];
 
 const MONGO_URI =
